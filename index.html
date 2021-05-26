@@ -1,71 +1,22 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
-        <style>
-            .main{
-                background-color: #3D9970;
-                margin: 100px 300px 100px;
-                height: 500px;
-                border: 5px solid white;
-                border-radius: 10px;
-                opacity: .9;
-            }
-            .anim {
-                background-color: white;
-                position: relative;
-                left: 300px;
-                display: inline-block;
-                overflow: hidden;
-                &:before{
-                    content:'';
-                    position: absolute;
-                    top: 0; right: 0;
-                    height: 100%;
-                    z-index: 1;
-                    background-color: black;
-                    animation: showText .8s ease;
-
-                }
-                h1 {
-                    opacity: 0;
-                    animation: animateText .7s forwards;
-                }
-            }
-            @keyframes animateText {
-                from{
-                    opacity: 0;
-                }
-                to{
-                    opacity: 1;
-                }
-                
-            }
-            @keyframes showText {
-                0%{
-                    width: 0;
-                    left: 0;
-                }
-                50%{
-                    width: 100%;
-                    left: 0;
-                }
-                100%{
-                    width: 0;
-                    left: 0;
-                }
-            }   
-            .searchWrapper {
-                display: flex;
-                position: relative;
-                left: 260px;
-            }
-        </style>
-        <div class="main">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Music Ratings</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/index.css">
+    </head>
+    <body>
+        <div class ="main">
             <div class="anim">
                 <h1>Music Ratings</h1>
             </div>
-        </head>
-        <body style =  "background-image: url('https://wallpaperaccess.com/full/2786927.jpg');">
             <div class="startButton">
                 <button type="button" onclick="searchBar()">Start</button>
             </div>
@@ -74,6 +25,12 @@
                 <input type="text" name="searchBar"/>
             </div>
         </div>
-        </body>
-    
+
+        
+        <script src="javascripts/global.js" async defer></script>
+       <!-- <script src="javascripts/models/artist.js" async defer></script> -->
+       <script src="javascripts/index.js" async defer></script>
+
+
+    </body>
 </html>

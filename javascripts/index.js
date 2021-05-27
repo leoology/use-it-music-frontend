@@ -1,4 +1,3 @@
-document.getElementsByClassName('searchWrapper').style.visibility = "hidden";
 const searchBar = document.getElementById("searchBar");
 searchBar.addEventListener("keyup", e=>{
     const searchString = e.target.value.toLowerCase();
@@ -10,8 +9,10 @@ searchBar.addEventListener("keyup", e=>{
     });
     displayArtists(filter);
 });
+document.getElementById('startButton').addEventListener("click", searchStuff);
 
-function searchBar(){
-    document.getElementsByClassName('searchWrapper').style.visibility = "visible";
+function searchStuff(){
+    document.getElementById('searchWrapper').style.visibility = "visible";
+    document.getElementById('startButton').style.visibility="hidden"
 
     }

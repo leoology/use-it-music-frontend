@@ -54,8 +54,13 @@ body{
         left: 0;
     }
 }   
-.searchWrapper {
+#searchWrapper {
+    visibility: hidden;
     display: flex;
     position: relative;
     left: 260px;
+}
+#startButton{
+    position: relative;
+    left: 350px;
 }

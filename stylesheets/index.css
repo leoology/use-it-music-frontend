@@ -64,3 +64,6 @@ body{
     position: relative;
     left: 350px;
 }
+#star{
+    visibility: hidden;
+}

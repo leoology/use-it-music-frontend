@@ -16,3 +16,12 @@ function searchStuff(){
     document.getElementById('startButton').style.visibility="hidden"
 
     }
+
+    document.getElementById('stars').addEventListener("click", stars);
+    function stars(){
+        document.getElementById('star').style.visibility = "visible";
+        document.getElementById('stars').style.visibility="hidden"
+
+
+    }
+

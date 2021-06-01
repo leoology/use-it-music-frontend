@@ -17,8 +17,8 @@ function searchStuff(){
 
     }
 
-    document.getElementById('stars').addEventListener("click", stars);
-    function stars(){
+    document.getElementById('stars').addEventListener("click", rateStars);
+    function rateStars(){
         document.getElementById('star').style.visibility = "visible";
         document.getElementById('stars').style.visibility="hidden"
 

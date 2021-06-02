@@ -1,0 +1,1 @@
+//all varivables files will need and getter functions

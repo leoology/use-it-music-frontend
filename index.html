@@ -5,6 +5,8 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/2e8049f882.js" crossorigin="anonymous"></script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Music Ratings</title>
@@ -18,23 +20,26 @@
                 <h1>Music Ratings</h1>
             </div>
             <div id="startButton">
-                <input type="button" onclick="searchStuff()" value= "Start Here!">
+                <input type="button" value= "Start Here!">
             </div>
             <div id="stars">
-                <input type="button" onclick="rateStars()" value="Rate">
+                <input type="button" value="Rate">
             </div>
             <div id="searchWrapper">
                 <h3> Search:</h3>
                 <input type="text" name="searchBar"/>
             </div>
-            <div id="star">
-                <h1>hello?</h1>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
+            <div class="star-widget">
+                <input type="radio" name="rate" id="rate-5">
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label for="rate-1" class="fas fa-star"></label>
         </div>
 
         

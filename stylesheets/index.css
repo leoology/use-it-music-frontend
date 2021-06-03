@@ -76,35 +76,15 @@ body{
     visibility: hidden;
 }
 
-#st1, #st2, #st3, #st4, #st5{
-    visibility: hidden;
-}
-
-#s1:hover{
-    visibility: hidden;
-}
-#s2:hover{
-    background-color: yellow;
-}
-#s3:hover{
-    background-color: yellow;
-}
-#s4:hover{
-    background-color: yellow;
-}
-#s5:hover{
-    background-color: yellow;
-}
-
-.container .star-widget input{
+  #star-widget input{
     display: none;
   }
-  .star-widget label{
+  #star-widget {
     font-size: 20px;
     color: #444;
     padding: 10px;
-    float: right;
-    transition: all 0.2s ease;
+    float: left;
+    visibility: hidden;
   }
   input:not(:checked) ~ label:hover,
   input:not(:checked) ~ label:hover ~ label{
@@ -115,6 +95,5 @@ body{
   }
   input#rate-5:checked ~ label{
     color: #fe7;
-    text-shadow: 0 0 20px #952;
   }
  

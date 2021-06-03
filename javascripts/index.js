@@ -19,42 +19,29 @@ function searchStuff(){
 
     document.getElementById('stars').addEventListener("click", rateStars);
     function rateStars(){
-        document.getElementById('star').style.visibility = "visible";
+        document.getElementById('star-widget').style.visibility = "visible";
         document.getElementById('stars').style.visibility="hidden"
 
 
     }
-    function turnStarsYellow(){
-        if (document.getElementById('s5').style.backgroundColor=="yellow"){
-        document.getElementById('s4').style.backgroundColor= "yellow" 
-            if (document.getElementById('s4').style.backgroundColor= "yellow"){
-            document.getElementById('s3').style.backgroundColor= "yellow" 
-                if (document.getElementById('s3').style.backgroundColor=="yellow"){
-                    document.getElementById('s2').style.backgroundColor= "yellow" 
-                    if (document.getElementById('s2').style.backgroundColor= "yellow"){
-                            document.getElementById('s1').style.backgroundColor= "yellow" 
-                    }
-                }
-            }
-        }
-    }
-document.getElementById('s1').addEventListener("click", rateOne);
+  
+document.getElementById('rate-1').addEventListener("click", rateOne);
 function rateOne(){
     Song.rating=1
 }
-document.getElementById('s2').addEventListener("click", rateTwo);
+document.getElementById('rate-2').addEventListener("click", rateTwo);
 function rateTwo(){
     Song.rating=2
 }
-document.getElementById('s3').addEventListener("click", rateThree);
+document.getElementById('rate-3').addEventListener("click", rateThree);
 function rateThree(){
     Song.rating=3
 }
-document.getElementById('s4').addEventListener("click", rateFour);
+document.getElementById('rate-4').addEventListener("click", rateFour);
 function rateFour(){
     Song.rating=4
 }
-document.getElementById('s5').addEventListener("click", rateFive);
+document.getElementById('rate-5').addEventListener("click", rateFive);
 function rateFive(){
     Song.rating=5
 }

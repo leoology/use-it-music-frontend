@@ -71,14 +71,15 @@ body{
     position: relative;
     left: 350px;
 }
-#star{
+/* #star{
     visibility: hidden;
-}
+} */
 
   #star-widget input{
     display: none;
   }
   #star-widget {
+    direction:rtl;
     font-size: 20px;
     color: #444;
     padding: 10px;
@@ -94,5 +95,8 @@ body{
   }
   input#rate-5:checked ~ label{
     color: #fe7;
+  }
+  #submit{
+      visibility: hidden;
   }
  

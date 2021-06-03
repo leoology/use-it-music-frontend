@@ -16,16 +16,15 @@ body{
     left: 300px;
     display: inline-block;
     overflow: hidden;
-    &:before, &:after{
-        content:'';
-        position: absolute;
-        top: 0; right: 0;
-        height: 100%;
-        z-index: 1;
-   
-
-    }
-    &:before{
+}
+&:before, &:after{
+    content:'';
+    position: absolute;
+    top: 0; right: 0;
+    height: 100%;
+    z-index: 1;
+}
+&:before{
         background-color: white;
         animation-delay: .5s;
         animation: showText .8s ease;

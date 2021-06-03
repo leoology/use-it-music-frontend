@@ -25,23 +25,23 @@ function searchStuff(){
 
     }
   
-document.getElementById('rate-1').addEventListener("click", rateOne);
-function rateOne(){
-    Song.rating=1
-}
-document.getElementById('rate-2').addEventListener("click", rateTwo);
-function rateTwo(){
-    Song.rating=2
-}
-document.getElementById('rate-3').addEventListener("click", rateThree);
-function rateThree(){
-    Song.rating=3
-}
-document.getElementById('rate-4').addEventListener("click", rateFour);
-function rateFour(){
-    Song.rating=4
-}
-document.getElementById('rate-5').addEventListener("click", rateFive);
-function rateFive(){
-    Song.rating=5
-}
+// document.getElementById('rate-1').addEventListener("click", rateOne);
+// function rateOne(){
+//     Song.rating=1
+// }
+// document.getElementById('rate-2').addEventListener("click", rateTwo);
+// function rateTwo(){
+//     Song.rating=2
+// }
+// document.getElementById('rate-3').addEventListener("click", rateThree);
+// function rateThree(){
+//     Song.rating=3
+// }
+// document.getElementById('rate-4').addEventListener("click", rateFour);
+// function rateFour(){
+//     Song.rating=4
+// }
+// document.getElementById('rate-5').addEventListener("click", rateFive);
+// function rateFive(){
+//     Song.rating=5
+// }

@@ -29,6 +29,11 @@
                 <h3> Search:</h3>
                 <input type="text" name="searchBar"/>
             </div>
+            <div>
+                <ul id="artistList">
+                    
+                </ul>
+            </div>
             <div id="star-widget">
                 <input type="radio" name="rate" id="rate-1" value="1">
                 <label for="rate-1" class="fas fa-star"></label>
@@ -47,9 +52,10 @@
         </div>
 
         
-        <script src="javascripts/global.js" async defer></script>
+        <script src="javascripts/global.js"></script>
        <!-- <script src="javascripts/models/artist.js" async defer></script> -->
-       <script src="javascripts/index.js" async defer></script>
+       <script src="javascripts/services/artistApi.js"></script>
+       <script src="javascripts/index.js"></script>
 
 
     </body>

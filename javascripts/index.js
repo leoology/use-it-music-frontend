@@ -9,6 +9,9 @@
 //     });
 //     displayArtists(filter);
 // });
+
+document.addEventListener("DOMContentLoaded", ArtistApi.fetchArtists)
+
 document.getElementById('startButton').addEventListener("click", searchStuff);
 
 function searchStuff(){
@@ -34,8 +37,8 @@ function searchStuff(){
         })
         let avg= total/Artist.ratings.count;
         return avg
-    }
-
+        }
+    
   
 // document.getElementById('rate-1').addEventListener("click", rateOne);
 // function rateOne(){

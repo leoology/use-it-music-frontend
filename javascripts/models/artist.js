@@ -38,8 +38,10 @@ class Artist{
             
             
         })
-        if (searchText.innerText===""){
+        if (e.target.value===""){
             document.getElementById("artists-list").innerHTML=""
+            document.getElementById("stars").style.visibility="hidden";
+
         }
 
     }
@@ -51,8 +53,10 @@ class Artist{
                 <h2>${this.name}</h2>
                 <p>Genre(s): ${this.genres}</p>
                 <p>Popularity: ${this.popularity}</p>
-                </li>
-                `
+            </li>
+        `
+        document.getElementById("stars").style.visibility="visible";
+
                 // <p> Average Rating: ${avgRating} </p>
     }
 

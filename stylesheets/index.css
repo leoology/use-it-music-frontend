@@ -110,5 +110,6 @@ body{
   }
   #stars{
       margin: 200px 350px 100px;
+      visibility: hidden;
   }
  

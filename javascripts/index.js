@@ -32,14 +32,7 @@ function searchStuff(){
     function submitRating(){
         document.getElementById('star-widget').value = Artist.rating
     }
-    function avgRating(){
-        Artist.ratings.each(function(i){
-            let total = 0
-            i+total
-        })
-        let avg= total/Artist.ratings.count;
-        return avg
-        }
+  
     
   
 // document.getElementById('rate-1').addEventListener("click", rateOne);

@@ -66,6 +66,7 @@ body{
     display: flex;
     position: relative;
     left: 260px;
+
 }
 #startButton{
     position: relative;
@@ -102,9 +103,12 @@ body{
   #artists-list{
       background-color: white;
       margin: 10px 300px 0px; 
-      border: 5px black;
+      border: 2px black;
       border-radius: 10px;
       list-style-type:none;
 
+  }
+  #stars{
+      margin: 200px 350px 100px;
   }
  

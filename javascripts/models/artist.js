@@ -32,17 +32,38 @@ class Artist{
             let a= document.createElement("a")
             a.innerText= artist.name
             a.href="#"
+           a.addEventListener("click", artist.show.bind(artist))
             li.append(a)
             document.getElementById("artists-list").append(li)
             
             
         })
-    }
-    // function displayArtist(){
-    //     document.getElementById("artists-list").childNodes.addEventListener("click", show)
-    // }
-  
+        if (searchText.innerText===""){
+            document.getElementById("artists-list").innerHTML=""
+        }
 
+    }
+    
+  
+     show(e){
+        document.getElementById("artists-list").innerHTML= `
+            <li class="artist">
+                <h2>${this.name}</h2>
+                <p>Genre(s): ${this.genres}</p>
+                <p>Popularity: ${this.popularity}</p>
+                </li>
+                `
+                // <p> Average Rating: ${avgRating} </p>
+    }
+
+    // function avgRating(){
+    //     Artist.ratings.each(function(i){
+    //         let total = 0
+    //         i+total
+    //     })
+    //     let avg= total/Artist.ratings.count;
+    //     return avg
+    //     }
 
     // static displayArtist = (artists) =>{
     //     const htmlString= artists.map((artist)=>{

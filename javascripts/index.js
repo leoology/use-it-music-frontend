@@ -21,6 +21,7 @@ function searchStuff(){
 
     }
 
+
     document.getElementById('stars').addEventListener("click", rateStars);
     function rateStars(){
         document.getElementById('star-widget').style.visibility = "visible";

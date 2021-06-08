@@ -99,4 +99,12 @@ body{
   #submit{
       visibility: hidden;
   }
+  #artists-list{
+      background-color: white;
+      margin: 10px 300px 0px; 
+      border: 5px black;
+      border-radius: 10px;
+      list-style-type:none;
+
+  }
  

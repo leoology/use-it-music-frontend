@@ -31,17 +31,18 @@ class Artist{
             let li= document.createElement("li")
             let a= document.createElement("a")
             a.innerText= artist.name
-            a.href= "#"
+            a.href="#"
             li.append(a)
             document.getElementById("artists-list").append(li)
-
+            
+            
         })
-        //target div on page to append artists eg. results
-        //iterate through artists
-        //forEach artist, build div (anchor tag for each artist name)
-        //attach click event to anchor tag
-        //append to div on line 29
     }
+    // function displayArtist(){
+    //     document.getElementById("artists-list").childNodes.addEventListener("click", show)
+    // }
+  
+
 
     // static displayArtist = (artists) =>{
     //     const htmlString= artists.map((artist)=>{

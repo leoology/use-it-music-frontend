@@ -27,11 +27,11 @@
             </div>
             <div id="searchWrapper">
                 <h3> Search:</h3>
-                <input type="text" name="searchBar"/>
+                <input type="text" name="searchBar" onkeyup="Artist.searchArtists"/>
             </div>
             <div>
-                <ul id="artistList">
-                    
+                <ul id="artists-list">
+
                 </ul>
             </div>
             <div id="star-widget">
@@ -55,6 +55,7 @@
         <script src="javascripts/global.js"></script>
        <!-- <script src="javascripts/models/artist.js" async defer></script> -->
        <script src="javascripts/services/artistApi.js"></script>
+       <script src="javascripts/models/artist.js"></script>
        <script src="javascripts/index.js"></script>
 
 

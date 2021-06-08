@@ -3,9 +3,11 @@ class ArtistApi {
         fetch("http://localhost:3000/artists")
         // fetch("https://api.spotify.com/v1/albums/' + albumId")
         .then(resp => resp.json())
-        .then(json => { json.array.forEach(artist => {
-            Artist.findArtist(artist)
-        });
+        .then(json => { 
+            json.forEach(artist => {
+                // debugger
+                Artist.findOrCreateArtist(artist)
+            });
             
             
             

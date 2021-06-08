@@ -17,6 +17,7 @@ document.getElementById('startButton').addEventListener("click", searchStuff);
 function searchStuff(){
     document.getElementById('searchWrapper').style.visibility = "visible";
     document.getElementById('startButton').style.visibility="hidden"
+    document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Artist.searchArtists)
 
     }
 

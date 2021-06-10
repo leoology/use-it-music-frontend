@@ -13,7 +13,7 @@ body{
 .anim {
     background-color: white;
     position: relative;
-    left: 300px;
+    left: 315px;
     display: inline-block;
     overflow: hidden;
 }
@@ -65,7 +65,7 @@ body{
     visibility: hidden;
     display: flex;
     position: relative;
-    left: 260px;
+    left: 280px;
 
 }
 #startButton{
@@ -80,13 +80,17 @@ body{
     display: none;
   }
   #star-widget {
-    direction:rtl;
+    direction: rtl;
     font-size: 20px;
     color: #444;
     padding: 10px;
     float: left;
     visibility: hidden;
-  }
+    /* margin: 50px 375px 100px; */
+    width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+}
   input:not(:checked) ~ label:hover,
   input:not(:checked) ~ label:hover ~ label{
     color: #fd4;
@@ -105,11 +109,16 @@ body{
       margin: 10px 300px 0px; 
       border: 2px black;
       border-radius: 10px;
+      height: 200px;
       list-style-type:none;
+      /* text-align: center; */
+      overflow: scroll;
+      visibility: hidden;
 
   }
   #stars{
-      margin: 200px 350px 100px;
       visibility: hidden;
+      margin: 50px 375px 100px;
+
   }
  

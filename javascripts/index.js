@@ -24,13 +24,14 @@ function searchStuff(){
 
     document.getElementById('stars').addEventListener("click", rateStars);
     function rateStars(){
+        // document.getElementById("stars").style.marginTop = "1000px";
         document.getElementById('star-widget').style.visibility = "visible";
         document.getElementById('stars').style.visibility="hidden";
         document.getElementById('submit').style.visibility="visible";
     }
     document.getElementById('submit').addEventListener("click", submitRating);
     function submitRating(){
-        document.getElementById('star-widget').value = Artist.rating
+        artist.rating= document.getElementById('star-widget').value
     }
   
     

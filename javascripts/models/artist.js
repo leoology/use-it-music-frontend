@@ -18,15 +18,17 @@ class Artist{
         })
     }
     static findAllByName(name){
+        const formattedName= name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
         return this.all.filter(function(artist){
-            return artist.name.startsWith(name)
+            return artist.name.startsWith(formattedName)
         })
     }
 
     static searchArtists(e){
         let searchText = e.target.value
-        // debugger
         const artists= Artist.findAllByName(searchText)
+        // debugger
+        document.getElementById("artists-list").innerHTML=""
         artists.forEach(artist =>{
             let li= document.createElement("li")
             let a= document.createElement("a")
@@ -35,13 +37,15 @@ class Artist{
            a.addEventListener("click", artist.show.bind(artist))
             li.append(a)
             document.getElementById("artists-list").append(li)
+            document.getElementById("artists-list").style.visibility="visible";
+
             
             
         })
         if (e.target.value===""){
             document.getElementById("artists-list").innerHTML=""
             document.getElementById("stars").style.visibility="hidden";
-
+            document.getElementById("artists-list").style.visibility="hidden";
         }
 
     }
@@ -53,21 +57,25 @@ class Artist{
                 <h2>${this.name}</h2>
                 <p>Genre(s): ${this.genres}</p>
                 <p>Popularity: ${this.popularity}</p>
-            </li>
-        `
+                </li>
+                `
+                // <p> Average Rating: ${artist.avgRating(this)} </p>
         document.getElementById("stars").style.visibility="visible";
 
-                // <p> Average Rating: ${avgRating} </p>
     }
 
-    // function avgRating(){
-    //     Artist.ratings.each(function(i){
-    //         let total = 0
-    //         i+total
-    //     })
-    //     let avg= total/Artist.ratings.count;
-    //     return avg
-    //     }
+    avgRating(){
+        // onclick  on rating stars invoke function that 
+        //create rating in back and front end and invoke function that will update rating(avgrating) on page
+        //go through all rating sin rating class and filter by artist, create constant out of filter and calculate average
+        this.ratings.forEach(function(i){
+            
+            let total = 0
+            i+total
+        })
+        let avg= total/this.ratings.count;
+        return avg
+        }
 
     // static displayArtist = (artists) =>{
     //     const htmlString= artists.map((artist)=>{

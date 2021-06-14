@@ -59,23 +59,12 @@ class Artist{
                 <p>Popularity: ${this.popularity}</p>
                 </li>
                 `
-                // <p> Average Rating: ${artist.avgRating(this)} </p>
-        document.getElementById("stars").style.visibility="visible";
+                // <p>Rating: ${rating.findRating(this)} </p>
+                document.getElementById("stars").style.visibility="visible";
+                
+            }
 
-    }
-
-    avgRating(){
-        // onclick  on rating stars invoke function that 
-        //create rating in back and front end and invoke function that will update rating(avgrating) on page
-        //go through all rating sin rating class and filter by artist, create constant out of filter and calculate average
-        this.ratings.forEach(function(i){
-            
-            let total = 0
-            i+total
-        })
-        let avg= total/this.ratings.count;
-        return avg
-        }
+   
 
     // static displayArtist = (artists) =>{
     //     const htmlString= artists.map((artist)=>{

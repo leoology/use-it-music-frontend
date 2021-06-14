@@ -86,9 +86,10 @@ body{
     padding: 10px;
     float: left;
     visibility: hidden;
-    /* margin: 50px 375px 100px; */
+    position: absolute;
     width: 100%;
-    /* margin: 0 auto; */
+    left: -1%;
+    top: 73%;
     text-align: center;
 }
   input:not(:checked) ~ label:hover,
@@ -103,7 +104,11 @@ body{
   }
   #submit{
       visibility: hidden;
+      position: absolute;
+      top: 75%;
+      left: 56%;
   }
+
   #artists-list{
       background-color: white;
       margin: 10px 300px 0px; 
@@ -121,4 +126,5 @@ body{
       margin: 50px 375px 100px;
 
   }
+
  

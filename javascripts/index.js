@@ -29,10 +29,11 @@ function searchStuff(){
         document.getElementById('stars').style.visibility="hidden";
         document.getElementById('submit').style.visibility="visible";
     }
-    document.getElementById('submit').addEventListener("click", submitRating);
+  
+    document.getElementById('submit').addEventListener("click", rating.submitRating);
     function submitRating(){
         artist.rating= document.getElementById('star-widget').value
+        Rating.createRatings()
     }
-  
     
   

@@ -4,9 +4,9 @@ class ArtistApi {
         // fetch("https://api.spotify.com/v1/albums/' + albumId")
         .then(resp => resp.json())
         .then(json => { 
-            json.forEach(artist => {
-                // debugger
-                Artist.findOrCreateArtist(artist)
+            json.data.forEach(artist => {
+                Artist.findOrCreateArtist(artist.attributes)
+               artist.attributes.ratings.forEach(rating=> new Rating(rating))
             });
             
             

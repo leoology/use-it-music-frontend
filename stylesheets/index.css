@@ -17,50 +17,7 @@ body{
     display: inline-block;
     overflow: hidden;
 }
-&:before, &:after{
-    content:'';
-    position: absolute;
-    top: 0; right: 0;
-    height: 100%;
-    z-index: 1;
-}
-&:before{
-        background-color: white;
-        animation-delay: .5s;
-        animation: showText .8s ease;
-    }
-    &:after{
-        background-color: black;
-        animation: showText .6s ease;
-    }
-    h1 {
-        opacity: 0;
-        animation: animateText .7s forwards;
-    }
-}
-@keyframes animateText {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-    
-}
-@keyframes showText {
-    0%{
-        width: 0;
-        left: 0;
-    }
-    50%{
-        width: 100%;
-        left: 0;
-    }
-    100%{
-        width: 0;
-        left: 100%;
-    }
-}   
+   
 #searchWrapper {
     visibility: hidden;
     display: flex;
@@ -127,4 +84,7 @@ body{
 
   }
 
+#username{
+    visibility: hidden;
+}
  

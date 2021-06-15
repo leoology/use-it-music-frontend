@@ -1,12 +1,12 @@
 class Artist{
     static all=[]
 
-    constructor({name, genres, image_url, popularity, rating}){
+    constructor({name, genres, image_url, popularity, id}){
         this.name = name
         this.genres = genres
         this.image_url = image_url
         this.popularity = popularity
-        this.rating=rating
+        this.id =id
         Artist.all.push(this)
     }
     static findOrCreateArtist(artist){
@@ -14,9 +14,16 @@ class Artist{
     }
     static findByName(name){
         return this.all.find(function(artist){
-            artist.name===name
+            return artist.name===name
         })
     }
+
+    static findById(id){
+        return this.all.find(function(artist){
+            return artist.id===id
+        })
+    }
+
     static findAllByName(name){
         const formattedName= name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
         return this.all.filter(function(artist){
@@ -51,19 +58,30 @@ class Artist{
     }
     
   
-     show(e){
+    show(e){
         document.getElementById("artists-list").innerHTML= `
             <li class="artist">
                 <h2>${this.name}</h2>
                 <p>Genre(s): ${this.genres}</p>
                 <p>Popularity: ${this.popularity}</p>
+                <p class="avg-rating">Rating: ${this.avgRating()} </p>
                 </li>
                 `
-                // <p>Rating: ${rating.findRating(this)} </p>
-                document.getElementById("stars").style.visibility="visible";
+        document.getElementById("stars").style.visibility="visible";
                 
-            }
+    }
 
+    avgRating(){
+        let total = 0
+        let userRatings = Rating.findRatingByArtistId(this.id)
+        userRatings.forEach(function(rating){
+            total+=rating.score
+        })
+        if(total===0){ return total}
+        let avg= total/userRatings.length;
+        
+        return avg.toFixed(2)
+    }
    
 
     // static displayArtist = (artists) =>{

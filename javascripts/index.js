@@ -27,13 +27,14 @@ function searchStuff(){
         // document.getElementById("stars").style.marginTop = "1000px";
         document.getElementById('star-widget').style.visibility = "visible";
         document.getElementById('stars').style.visibility="hidden";
-        document.getElementById('submit').style.visibility="visible";
+        Array.from(document.getElementsByClassName('rate')).forEach(star => {
+            star.addEventListener("click", Rating.createRatings)
+            
+        });
     }
   
-    document.getElementById('submit').addEventListener("click", rating.submitRating);
-    function submitRating(){
-        artist.rating= document.getElementById('star-widget').value
-        Rating.createRatings()
-    }
+    // document.getElementById('submit').addEventListener("submit", Rating.createRatings);
+ 
+    
     
   

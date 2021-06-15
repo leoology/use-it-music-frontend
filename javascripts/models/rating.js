@@ -5,49 +5,46 @@ class Rating{
     constructor({id, score, artist_id}){
         this.id = id
         this.score = score
-        this.artist_id = artist_id
+        this.artistId = artist_id
         Rating.all.push(this)
     }
-    findRating(){
-        Rating.all.filter(currentRating => currentRating.artist_id === this.id)
+    static findRatingByArtistId(artistId){
+       return this.all.filter(currentRating => currentRating.artistId === artistId)
     }
     
-
-    avgRating(){
-
-        let total = 0
-        this.findRating().forEach(function(i){
-            i+total
-        })
-        let avg= total/this.ratings.count;
-        return avg
-        }
     
     static fetchRatings() {
         fetch("http://localhost:3000/ratings")
         .then(resp => resp.json())
         .then(json => { 
             json.forEach(rating => {
-                debugger
+
                 findOrCreateRating()
             });
         })
     }
 
     static findOrCreateRating(rating){
-        this.findById(rating.id)|| new Rating(rating){
-        }
+        this.findById(rating.id)|| new Rating(rating)
     }
     static findById(id){
         return this.all.find(function(id){
             rating.id=== id
         })
     }
-    function submitRating(){
+     submitRating(){
         artist.rating= document.getElementById('star-widget').value
     }
 
-    static createRatings() {
+    static createRatings(e) {
+        const artistName =e.target.parentElement.parentElement.querySelector("#artists-list .artist h2").innerText
+        const findArtist= Artist.findByName(artistName)
+        // debugger
+        const scoreMap= {"1":5, "2":4, "3":3,"4":2,"5":1}
+        const data = {
+            score: scoreMap[e.target.value],
+            artist_id: findArtist.id
+        }
         fetch("http://localhost:3000/ratings", {
             method: 'POST',
          headers: {
@@ -57,10 +54,11 @@ class Rating{
         })
         .then(resp => resp.json())
         .then(json => { 
-            json.forEach(rating => {
-                debugger
-                findOrCreateRating()
-            });
+            new Rating(json)
+            const artist= Artist.findById(json.artist_id)
+            document.querySelector(".avg-rating").innerText=`Rating: ${artist.avgRating()}`
+            document.getElementById('star-widget').style.visibility = "hidden";
+
         })
     }
         

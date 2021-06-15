@@ -14,7 +14,7 @@ class User{
         })
     }
 
-    static searchArtists(e){
+    static searchUsers(e){
         let searchText = e.target.value
         const users= User.findAllByName(searchText)
         // debugger
@@ -25,6 +25,7 @@ class User{
             a.innerText= user.name
             a.href="#"
            a.addEventListener("click", user.show.bind(user))
+           document.getElementById("submit-user").addEventListener("click", handleSubmit.bind(user))
             li.append(a)
             document.getElementById("users-list").append(li)
             document.getElementById("users-list").style.visibility="visible";
@@ -38,4 +39,16 @@ class User{
         }
 
     }
+
+    static findAllByName(name){
+        const formattedName= name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
+        return this.all.filter(function(user){
+            return user.name.startsWith(formattedName)
+        })
+    }
+    static handleSubmit(user){
+        new User(user)
+        document.getElementById("users-list").innerText=""
+    }
+
 }

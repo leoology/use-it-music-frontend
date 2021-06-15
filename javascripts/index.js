@@ -18,6 +18,8 @@ document.getElementById('startButton').addEventListener("click", user);
 function user(){
     document.getElementById('startButton').style.visibility="hidden"
     document.getElementById('username').style.visibility="visible"
+    document.querySelector("#username > input[type=text]").addEventListener("keyup", User.searchUsers)
+
 
 }
 

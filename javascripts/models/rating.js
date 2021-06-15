@@ -12,17 +12,6 @@ class Rating{
        return this.all.filter(currentRating => currentRating.artistId === artistId)
     }
     
-    
-    static fetchRatings() {
-        fetch("http://localhost:3000/ratings")
-        .then(resp => resp.json())
-        .then(json => { 
-            json.forEach(rating => {
-
-                findOrCreateRating()
-            });
-        })
-    }
 
     static findOrCreateRating(rating){
         this.findById(rating.id)|| new Rating(rating)
@@ -34,32 +23,6 @@ class Rating{
     }
      submitRating(){
         artist.rating= document.getElementById('star-widget').value
-    }
-
-    static createRatings(e) {
-        const artistName =e.target.parentElement.parentElement.querySelector("#artists-list .artist h2").innerText
-        const findArtist= Artist.findByName(artistName)
-        // debugger
-        const scoreMap= {"1":5, "2":4, "3":3,"4":2,"5":1}
-        const data = {
-            score: scoreMap[e.target.value],
-            artist_id: findArtist.id
-        }
-        fetch("http://localhost:3000/ratings", {
-            method: 'POST',
-         headers: {
-            'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(data)
-        })
-        .then(resp => resp.json())
-        .then(json => { 
-            new Rating(json)
-            const artist= Artist.findById(json.artist_id)
-            document.querySelector(".avg-rating").innerText=`Rating: ${artist.avgRating()}`
-            document.getElementById('star-widget').style.visibility = "hidden";
-
-        })
     }
         
 }

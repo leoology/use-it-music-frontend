@@ -11,12 +11,19 @@
 // });
 
 document.addEventListener("DOMContentLoaded", ArtistApi.fetchArtists)
+document.addEventListener("DOMContentLoaded", UserApi.fetchUsers)
 
-document.getElementById('startButton').addEventListener("click", searchStuff);
+document.getElementById('startButton').addEventListener("click", user);
+
+function user(){
+    document.getElementById('startButton').style.visibility="hidden"
+    document.getElementById('username').style.visibility="visible"
+
+}
 
 function searchStuff(){
     document.getElementById('searchWrapper').style.visibility = "visible";
-    document.getElementById('startButton').style.visibility="hidden"
+    document.getElementById('username').style.visibility="hidden"
     document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Artist.searchArtists)
 
     }
@@ -28,7 +35,7 @@ function searchStuff(){
         document.getElementById('star-widget').style.visibility = "visible";
         document.getElementById('stars').style.visibility="hidden";
         Array.from(document.getElementsByClassName('rate')).forEach(star => {
-            star.addEventListener("click", Rating.createRatings)
+            star.addEventListener("click", RatingApi.createRatings)
             
         });
     }

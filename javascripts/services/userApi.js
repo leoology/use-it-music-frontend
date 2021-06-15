@@ -1,11 +1,10 @@
-class ArtistApi {
-    static fetchArtists() {
-        fetch("http://localhost:3000/artists")
+class UserApi {
+    static fetchUsers() {
+        fetch("http://localhost:3000/users")
         .then(resp => resp.json())
         .then(json => { 
-            json.data.forEach(artist => {
-                Artist.findOrCreateArtist(artist.attributes)
-               artist.attributes.ratings.forEach(rating=> new Rating(rating))
+            json.data.forEach(user => {
+                User.findOrCreateUser(user)
             });
             
             

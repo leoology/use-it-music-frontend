@@ -4,7 +4,8 @@ class UserApi {
         .then(resp => resp.json())
         .then(json => { 
             json.forEach(user => {
-                User.findOrCreateUser(user)
+                User.findOrCreateUser(user.name)
+                User.ratings
             });
     })
     }

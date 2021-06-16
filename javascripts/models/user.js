@@ -49,6 +49,20 @@ class User{
     static handleSubmit(user){
         new User(user)
         document.getElementById("users-list").innerText=""
+        document.getElementById('username').style.visibility="hidden"
+        searchStuff()
+
     }
+
+    show(e){
+               
+    }
+
+     searchStuff(){
+        document.getElementById('searchWrapper').style.visibility = "visible";
+        document.getElementById('username').style.visibility="hidden"
+        document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Artist.searchArtists)
+    
+        }
 
 }

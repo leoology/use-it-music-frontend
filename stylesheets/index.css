@@ -101,4 +101,10 @@ body{
   visibility: hidden;
 
 }
- 
+ .hidden{
+   visibility: hidden;
+ }
+ #welcome-users{
+  visibility: hidden;
+
+ }

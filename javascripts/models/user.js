@@ -15,28 +15,17 @@ class User{
     }
 
     static searchUsers(e){
-        let searchText = e.target.value
-        const users= User.findAllByName(searchText)
-        // debugger
-        document.getElementById("users-list").innerHTML=""
-        users.forEach(user =>{
-            let li= document.createElement("li")
-            let a= document.createElement("a")
-            a.innerText= user.name
-            a.href="#"
-           a.addEventListener("click", user.show.bind(user))
-           document.getElementById("submit-user").addEventListener("click", handleSubmit.bind(user))
-            li.append(a)
-            document.getElementById("users-list").append(li)
-            document.getElementById("users-list").style.visibility="visible";
-
-            
-            
-        })
-        if (e.target.value===""){
-            document.getElementById("users-list").innerHTML=""
-            document.getElementById("users-list").style.visibility="hidden";
+        let searchText = e.target.previousElementSibling.value
+        const user= User.findByName(searchText)
+        if(!!user){
+            // debugger
+           const h2= document.getElementById("welcome-users")
+           h2.innerText=`Welcome ${user.name}`
+            h2.classList.toggle("hidden")
+        } else{
+            UserApi.fetchUser(searchText)
         }
+        searchText=""
 
     }
 
@@ -46,17 +35,14 @@ class User{
             return user.name.startsWith(formattedName)
         })
     }
-    static handleSubmit(user){
-        new User(user)
+    static handleSubmit(){
+        this.findOrCreateUser()
         document.getElementById("users-list").innerText=""
         document.getElementById('username').style.visibility="hidden"
-        searchStuff()
+        searchStuff();
 
     }
 
-    show(e){
-               
-    }
 
      searchStuff(){
         document.getElementById('searchWrapper').style.visibility = "visible";

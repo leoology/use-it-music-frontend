@@ -46,7 +46,7 @@ body{
     position: absolute;
     width: 100%;
     left: -1%;
-    top: 73%;
+    top: 45%;
     text-align: center;
 }
   input:not(:checked) ~ label:hover,
@@ -89,22 +89,12 @@ body{
     position: absolute;
     right: 43%;
 }
-#users-list{
-  background-color: white;
-  margin: 10px 300px 0px; 
-  border: 2px black;
-  border-radius: 10px;
-  height: 200px;
-  list-style-type:none;
-  /* text-align: center; */
-  overflow: scroll;
-  visibility: hidden;
-
-}
  .hidden{
    visibility: hidden;
  }
  #welcome-users{
   visibility: hidden;
-
+  background-color: white;
+  position: absolute;
+  left: 47%;
  }

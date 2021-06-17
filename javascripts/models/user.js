@@ -21,11 +21,14 @@ class User{
             // debugger
            const h2= document.getElementById("welcome-users")
            h2.innerText=`Welcome ${user.name}`
-            h2.classList.toggle("hidden")
+            h2.style.visibility= "visible"
+            document.getElementById('username').style.visibility = "hidden";
+            document.getElementById('searchWrapper').style.visibility = "visible";
+            document.getElementById('username').style.visibility="hidden"
+            document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Artist.searchArtists)
         } else{
             UserApi.fetchUser(searchText)
         }
-        searchText=""
 
     }
 
@@ -43,12 +46,5 @@ class User{
 
     }
 
-
-     searchStuff(){
-        document.getElementById('searchWrapper').style.visibility = "visible";
-        document.getElementById('username').style.visibility="hidden"
-        document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Artist.searchArtists)
-    
-        }
 
 }

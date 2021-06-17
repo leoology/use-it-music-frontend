@@ -80,7 +80,7 @@ class Artist{
         if(total===0){ return total}
         let avg= total/userRatings.length;
         
-        return avg.toFixed(2)
+        return avg.toFixed(1)
     }
    
 

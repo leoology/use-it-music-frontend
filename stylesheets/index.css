@@ -46,7 +46,7 @@ body{
     position: absolute;
     width: 100%;
     left: -1%;
-    top: 45%;
+    top: 75%;
     text-align: center;
 }
   input:not(:checked) ~ label:hover,

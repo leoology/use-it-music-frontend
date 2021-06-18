@@ -28,6 +28,7 @@ class RatingApi {
             // debugger
             document.querySelector(".avg-rating").innerText=`Rating: ${artist.avgRating()}`
             document.getElementById('star-widget').style.visibility = "hidden";
+            document.getElementById('star-widget').querySelector('input').checked=false
             
         })
         

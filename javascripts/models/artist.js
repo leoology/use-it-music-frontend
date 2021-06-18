@@ -53,6 +53,8 @@ class Artist{
             document.getElementById("artists-list").innerHTML=""
             document.getElementById("stars").style.visibility="hidden";
             document.getElementById("artists-list").style.visibility="hidden";
+            document.getElementById('star-widget').style.visibility = "hidden";
+
         }
 
     }

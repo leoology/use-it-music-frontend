@@ -33,21 +33,21 @@ body{
     visibility: hidden;
 } */
 
-  #star-widget input{
-    display: none;
-  }
-  #star-widget {
-    direction: rtl;
-    font-size: 20px;
-    color: #444;
-    padding: 10px;
-    float: left;
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    left: -1%;
-    top: 75%;
-    text-align: center;
+#star-widget input{
+  display: none;
+}
+#star-widget {
+  direction: rtl;
+  font-size: 20px;
+  color: #444;
+  padding: 10px;
+  float: left;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  left: -1%;
+  top: 75%;
+  text-align: center;
 }
   input:not(:checked) ~ label:hover,
   input:not(:checked) ~ label:hover ~ label{

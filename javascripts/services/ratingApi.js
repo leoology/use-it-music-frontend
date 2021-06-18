@@ -11,11 +11,12 @@ class RatingApi {
             artist_id: findArtist.id,
             user_id: findUser.id
         }
+        // debugger
         fetch("http://localhost:3000/ratings", {
             
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(data)
         })
@@ -23,12 +24,12 @@ class RatingApi {
         .then(json => { 
             new Rating(json)
             
-            const artist= Artist.findById(json.artist_id)
+            const artist= Artist.findById(data.artist_id)
+            // debugger
             document.querySelector(".avg-rating").innerText=`Rating: ${artist.avgRating()}`
             document.getElementById('star-widget').style.visibility = "hidden";
             
         })
-        .catch(this.handleError)
         
 
     }

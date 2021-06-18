@@ -17,9 +17,11 @@ class UserApi {
             },
         body: JSON.stringify({name})
         })
-        .then(resp => resp.text())
+        .then(resp => resp.json())
         .then(json => { 
-            // debugger
+            json.data.find(user => {
+                User.findOrCreateUser(user)
+            });
         })
         .catch(this.handleError)
     }

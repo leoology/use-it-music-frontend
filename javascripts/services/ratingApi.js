@@ -12,7 +12,7 @@ class RatingApi {
             user_id: findUser.id
         }
         // debugger
-        fetch("http://localhost:3000/ratings", {
+        fetch("https://use-it-music.herokuapp.com/ratings", {
             
             method: 'POST',
             headers: {

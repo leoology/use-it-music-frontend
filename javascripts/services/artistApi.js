@@ -1,6 +1,6 @@
 class ArtistApi {
     static fetchArtists() {
-        fetch("http://localhost:3000/artists")
+        fetch("https://use-it-music.herokuapp.com/artists")
         .then(resp => resp.json())
         .then(json => { 
             json.data.forEach(artist => {

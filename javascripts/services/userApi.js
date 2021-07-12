@@ -10,7 +10,7 @@ class UserApi {
     })
     }
     static fetchUser(name) {
-        fetch("http://localhost:3000/users", {
+        fetch("https://use-it-music.herokuapp.com/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

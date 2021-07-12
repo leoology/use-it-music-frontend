@@ -1,6 +1,6 @@
 class UserApi {
     static fetchUsers() {
-        fetch("http://localhost:3000/users")
+        fetch("https://use-it-music.herokuapp.com/users")
         .then(resp => resp.json())
         .then(json => { 
             json.forEach(user => {
